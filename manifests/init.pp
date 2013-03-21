@@ -1,4 +1,4 @@
-class environment {
+class env {
   case $::osfamily {
     'RedHat': {
       concat { [ '/etc/profile.d/puppet.sh', '/etc/profile.d/puppet.csh' ]: }
@@ -21,37 +21,8 @@ class environment {
           }
 
           exec { "/usr/sbin/env-update":
-            subscribe => File[$env],
+            subscribe => File['/etc/env.d/99puppet'],
             refreshonly => true,
-          }
-        }
-      }
-    }
-  }
-}
-
-define environment::variable($content) {
-  case $::osfamily {
-    'RedHat': {
-      concat::fragment { "env_var_$name_redhat_sh":
-        target => '/etc/profile.d/puppet.sh',
-        content => "export ${name}=${content}",
-        order => 01,
-      }
-
-      concat::fragment { "env_var_$name_redhat_csh":
-        target => '/etc/profile.d/puppet.csh',
-        content => "setenv ${name} ${content}",
-        order => 01,
-      }
-    }
-    default: {
-      case $::operatingsystem {
-        'Gentoo': {
-          concat::fragment { "env_var_$name_gentoo":
-            target => "/etc/env.d/99puppet",
-            content => "${name}=${content}",
-            order => 01,
           }
         }
       }
