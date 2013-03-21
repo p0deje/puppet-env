@@ -1,6 +1,6 @@
-name 'flameeyes-env'
-version '0.0.1'
-author 'Diego Elio Pettenò <flameeyes@flameeyes.eu>'
+name 'Flameeyes-env'
+version '0.0.2'
+author 'Diego Elio Petteno` <flameeyes@flameeyes.eu>'
 license 'Apache License, Version 2.0'
 summary 'Cross-platform environemnt variables handling'
 description 'This module allows to set enviroment variables, on multiple distributions.
