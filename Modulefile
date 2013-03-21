@@ -1,5 +1,5 @@
 name 'Flameeyes-env'
-version '0.1.0'
+version '0.1.1'
 author 'Diego Elio Petteno` <flameeyes@flameeyes.eu>'
 license 'Apache License, Version 2.0'
 summary 'Cross-platform environemnt variables handling'
