@@ -1,4 +1,4 @@
-Cross-platform environemnt variables handling for Puppet
+Cross-platform environment variables handling for Puppet
 ========================================================
 
 Overview
