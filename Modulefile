@@ -7,6 +7,6 @@ description 'This module allows to set enviroment variables, on multiple distrib
 
 Each distribution nowadays has its way to handle environment
 variables, this module abstracts the interface for them.'
-project_page 'https://github.com/Flameeyes/puppet-gentoo'
+project_page 'https://github.com/Flameeyes/puppet-env'
 
 dependency 'ripienaar/concat'
