@@ -4,7 +4,7 @@ define env::variable($content) {
   }
 
   case $::osfamily {
-    'RedHat': {
+    'RedHat', 'Debian': {
       concat::fragment { "env_var_${name}_redhat_sh":
         target => '/etc/profile.d/puppet.sh',
         content => "export ${name}=${content}\n",
